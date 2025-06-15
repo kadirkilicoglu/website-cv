@@ -1,0 +1,112 @@
+/* About.css - Siyah-Yeşil Tema Uyumlu */
+.about-section {
+  padding: 8rem 5% 4rem;
+  background: var(--primary-bg); /* Siyah arkaplan */
+  min-height: 100vh;
+}
+
+.page-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: var(--accent-green); /* Yeşil başlık */
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary); /* Gri alt başlık */
+}
+
+.profile-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.profile-image {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 255, 136, 0.1); /* Yeşil gölge */
+  border: 2px solid var(--accent-green); /* Yeşil kenarlık */
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info h2 {
+  font-size: 2.4rem;
+  color: var(--accent-green); /* Yeşil başlık */
+  margin-bottom: 0.5rem;
+}
+
+.profile-info h3 {
+  font-size: 1.4rem;
+  color: var(--text-secondary); /* Gri metin */
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  font-size: 1.1rem;
+  color: var(--text-secondary); /* Gri metin */
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.detail-card {
+  background: var(--secondary-bg); /* Koyu gri kart */
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.1); /* Yeşil gölge */
+  border-left: 4px solid var(--accent-green); /* Yeşil sol kenarlık */
+}
+
+.detail-card h4 {
+  font-size: 1.4rem;
+  color: var(--accent-green); /* Yeşil başlık */
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color); /* Gri çizgi */
+}
+
+.detail-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.detail-card li {
+  padding: 0.8rem 0;
+  color: var(--text-secondary); /* Gri metin */
+  border-bottom: 1px solid var(--border-color); /* Gri çizgi */
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+  .profile-image {
+    max-width: 100%; /* Daha esnek boyut */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+}

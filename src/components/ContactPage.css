@@ -1,0 +1,72 @@
+/* Contact.css - Siyah-Yeşil Tema Uyumlu */
+.contact-section {
+  padding: 8rem 5% 4rem;
+  background: var(--primary-bg); /* Siyah arkaplan */
+  min-height: 100vh;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--accent-green); /* Yeşil alt başlık */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  color: var(--accent-green); /* Yeşil başlık */
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-card {
+  background: var(--secondary-bg); /* Koyu gri kart */
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1); /* Yeşil gölge */
+  border-left: 4px solid var(--accent-green); /* Yeşil sol kenarlık */
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.social-item {
+  padding: 1.5rem;
+  background: var(--secondary-bg); /* Koyu gri arkaplan */
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-secondary); /* Gri metin */
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-item:hover {
+  transform: translateY(-3px);
+  background: var(--accent-green); /* Yeşil arkaplan */
+  color: var(--primary-bg); /* Siyah metin */
+}
+
+.social-icon {
+  font-size: 1.5rem;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+}

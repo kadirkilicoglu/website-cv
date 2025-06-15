@@ -1,0 +1,106 @@
+/* components/Blog.css */
+.blog {
+  padding: 4rem 2rem;
+  background: var(--primary-bg) !important; /* Siyah arkaplan */
+  text-align: center;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.blog-header {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.blog-header h1 {
+  font-size: 2.5rem;
+  color: var(--accent-green) !important; /* Yeşil başlık */
+  margin-bottom: 1rem;
+}
+
+.blog-header p {
+  font-size: 1.2rem;
+  color: var(--text-secondary) !important; /* Gri metin */
+}
+
+.back-button {
+  display: inline-block;
+  background: var(--accent-green) !important; /* Yeşil buton */
+  color: var(--primary-bg) !important; /* Siyah metin */
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: #00cc6a !important; /* Hoverda koyu yeşil */
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.blog-card {
+  background: var(--secondary-bg) !important; /* Koyu gri kart */
+  border: 1px solid var(--border-color) !important; /* Kenarlık */
+  box-shadow: 0 4px 8px rgba(0,255,136,0.1) !important; /* Yeşil gölge */
+}
+
+.blog-card:hover {
+  box-shadow: 0 8px 16px rgba(0,255,136,0.2) !important; /* Hoverda yeşil gölge */
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--accent-green) !important; /* Yeşil alt çizgi */
+}
+
+.blog-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.blog-content h2 {
+  font-size: 1.5rem;
+  color: var(--accent-green) !important; /* Yeşil başlık */
+}
+
+.blog-date {
+  color: var(--text-secondary) !important; /* Gri tarih */
+}
+
+.blog-description {
+  color: var(--text-secondary) !important; /* Gri metin */
+}
+
+.blog-button {
+  background: var(--accent-green) !important; /* Yeşil buton */
+  color: var(--primary-bg) !important; /* Siyah metin */
+}
+
+.blog-button:hover {
+  background: #00cc6a !important; /* Hoverda koyu yeşil */
+}
+
+/* Mobil Stiller */
+@media (max-width: 768px) {
+  .blog-header h1 {
+    font-size: 2rem;
+  }
+
+  .blog-header p {
+    font-size: 1rem;
+  }
+
+  .blog-posts {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,126 @@
+/* ContentStyles.css */
+:root {
+  --primary-bg: #0a0a0a;          /* Ana arkaplan (siyah) */
+  --secondary-bg: #1a1a1a;        /* İkincil arkaplan */
+  --accent-green: #00ff88;        /* Vurgu yeşili */
+  --text-primary: #e0e0e0;        /* Ana metin (açık gri) */
+  --text-secondary: #888;         /* İkincil metin */
+  --border-color: #2a2a2a;        /* Kenarlık rengi */
+}
+
+/* Temel Yapı */
+.content-section {
+  padding: 8rem 5% 4rem;
+  background: var(--primary-bg);  /* Siyah arkaplan */
+  min-height: 100vh;
+}
+
+.page-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: var(--accent-green);     /* Yeşil başlık */
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);   /* Gri alt başlık */
+}
+
+/* Kart Sistemi */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content-card {
+  background: var(--secondary-bg) !important; /* Koyu gri kart */
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid var(--border-color) !important; /* Kenarlık */
+  box-shadow: 0 4px 6px rgba(0, 255, 136, 0.05);    /* Yeşil tonlu gölge */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 255, 136, 0.1);   /* Hoverda yeşil gölge */
+}
+
+.card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--accent-green);     /* Yeşil alt çizgi */
+}
+
+.card-content {
+  padding: 1.8rem;
+}
+
+.card-content h2 {
+  font-size: 1.6rem;
+  color: var(--accent-green) !important; /* Yeşil başlık */
+  margin-bottom: 0.8rem;
+}
+
+.meta-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: var(--accent-green) !important; /* Yeşil tarih */
+  font-weight: 500;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-secondary) !important; /* Gri metin */
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+.card-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.8rem;
+  background: var(--accent-green) !important; /* Yeşil buton */
+  color: var(--primary-bg) !important;        /* Siyah metin */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.card-button:hover {
+  background: #00cc6a !important; /* Hoverda koyu yeşil */
+  transform: translateY(-2px);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .content-section {
+    padding: 6rem 5% 2rem;
+  }
+}
